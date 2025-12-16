@@ -1,0 +1,46 @@
+Dec 16 09:09:32 nanopc sudo[3824]:      poc : TTY=tty1 ; PWD=/home/poc ; USER=root ; COMMAND=/run/current-system/sw/bin/iwlist wlP3p49s0 scan
+Dec 16 09:09:32 nanopc sudo[3824]: pam_unix(sudo:session): session opened for user root(uid=0) by poc(uid=1000)
+Dec 16 09:09:32 nanopc kernel: Unable to handle kernel paging request at virtual address ffff800085b40522
+Dec 16 09:09:32 nanopc kernel: Mem abort info:
+Dec 16 09:09:32 nanopc kernel:   ESR = 0x0000000096000021
+Dec 16 09:09:32 nanopc kernel:   EC = 0x25: DABT (current EL), IL = 32 bits
+Dec 16 09:09:32 nanopc kernel:   SET = 0, FnV = 0
+Dec 16 09:09:32 nanopc kernel:   EA = 0, S1PTW = 0
+Dec 16 09:09:32 nanopc kernel:   FSC = 0x21: alignment fault
+Dec 16 09:09:32 nanopc kernel: Data abort info:
+Dec 16 09:09:32 nanopc kernel:   ISV = 0, ISS = 0x00000021, ISS2 = 0x00000000
+Dec 16 09:09:32 nanopc kernel:   CM = 0, WnR = 0, TnD = 0, TagAccess = 0
+Dec 16 09:09:32 nanopc kernel:   GCS = 0, Overlay = 0, DirtyBit = 0, Xs = 0
+Dec 16 09:09:32 nanopc kernel: swapper pgtable: 4k pages, 48-bit VAs, pgdp=0000000005549000
+Dec 16 09:09:32 nanopc kernel: [ffff800085b40522] pgd=0000000000000000, p4d=1000000102209403, pud=100000010220a403, pmd=1000000116de1403, pte=00780000f3200f13
+Dec 16 09:09:32 nanopc kernel: Internal error: Oops: 0000000096000021 [#1]  SMP
+Dec 16 09:09:32 nanopc kernel: Modules linked in: xt_REDIRECT nf_nat_pptp nf_conntrack_pptp nft_chain_nat xt_MASQUERADE nf_nat snd_soc_hdmi_codec polyval_ce sm4 snd_soc_simple_card display_connector gpio_ir_recv snd_soc_simple_card_utils fusb302 tcpm snd_soc_rt5616 snd_soc_rl6231 rtc_hym8563 rk805_pwrkey phy_rockchip_usbdp typec thunderbolt phy_rockchip_samsung_hdptx cmdlinepart spi_rockchip_sfc rockchip_dfi snd_soc_rockchip_i2s_tdm snd_soc_core snd_compress ac97_bus snd_pcm_dmaengine snd_pcm synopsys_hdmirx snd_timer snd v4l2_dv_timings hantro_vpu soundcore rtw88_8822ce rtw88_8822c v4l2_vp9 v4l2_h264 v4l2_jpeg rtw88_pci videobuf2_dma_contig rtw88_core mac80211 btusb btrtl btintel btmtk btbcm bluetooth tyr r8169 panthor libarc4 drm_gpuvm gpu_sched ecdh_generic ecc drm_exec adc_keys onboard_usb_dev cfg80211 rfkill 8021q garp mrp stp llc mousedev joydev hid_multitouch pci_endpoint_test xt_conntrack nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 ip6t_rpfilter ipt_rpfilter xt_pkttype xt_LOG nf_log_syslog xt_tcpudp nft_compat x_tables nf_tables
+Dec 16 09:09:32 nanopc kernel:  sch_fq_codel fuse nfnetlink zram 842_decompress 842_compress lz4hc_compress lz4_compress rockchip_rga videobuf2_dma_sg videobuf2_memops v4l2_mem2mem videobuf2_v4l2 videodev nvme videobuf2_common nvme_core mc nvme_keyring nvme_auth hkdf mmc_block rpmb_core dm_mod dax
+Dec 16 09:09:32 nanopc kernel: CPU: 0 UID: 0 PID: 69 Comm: kworker/u32:2 Not tainted 6.18.1 #1-NixOS VOLUNTARY
+Dec 16 09:09:32 nanopc kernel: Hardware name: FriendlyElec NanoPC-T6 LTS (DT)
+Dec 16 09:09:32 nanopc kernel: Workqueue: phy0 rtw_c2h_work [rtw88_core]
+Dec 16 09:09:32 nanopc kernel: pstate: 60400009 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+Dec 16 09:09:32 nanopc kernel: pc : rtw_pci_read32+0x18/0x40 [rtw88_pci]
+Dec 16 09:09:32 nanopc kernel: lr : rtw_core_enable_beacon+0xe0/0x150 [rtw88_core]
+Dec 16 09:09:32 nanopc kernel: sp : ffff800080ca3cb0
+Dec 16 09:09:32 nanopc kernel: x29: ffff800080ca3cb0 x28: ffff0001031db6c0 x27: 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x26: ffffde1542a740a0 x25: ffff0001031db740 x24: ffff000112bff1c0
+Dec 16 09:09:32 nanopc kernel: x23: ffff000112bff1d8 x22: ffff00011bb799d0 x21: 0000000000000001
+Dec 16 09:09:32 nanopc kernel: x20: 0000000000000001 x19: ffff00011bb720a0 x18: 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x14: 0000000000000000 x13: 0000000000000000 x12: 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x11: 0000000000000000 x10: 0000000000000000 x9 : ffffde150f77f098
+Dec 16 09:09:32 nanopc kernel: x8 : 0000000000000000 x7 : 0000000000000000 x6 : 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x5 : 0000000000000000 x4 : 0000000000000000 x3 : 0000000000000000
+Dec 16 09:09:32 nanopc kernel: x2 : 0000000000007f10 x1 : 0000000000000522 x0 : ffff800085b40522
+Dec 16 09:09:32 nanopc kernel: Call trace:
+Dec 16 09:09:32 nanopc kernel:  rtw_pci_read32+0x18/0x40 [rtw88_pci] (P)
+Dec 16 09:09:32 nanopc kernel:  rtw_hw_scan_chan_switch+0x124/0x1a8 [rtw88_core]
+Dec 16 09:09:32 nanopc kernel:  rtw_fw_c2h_cmd_handle+0x254/0x290 [rtw88_core]
+Dec 16 09:09:32 nanopc kernel:  rtw_c2h_work+0x50/0x98 [rtw88_core]
+Dec 16 09:09:32 nanopc kernel:  process_one_work+0x178/0x3f8
+Dec 16 09:09:32 nanopc kernel:  worker_thread+0x208/0x418
+Dec 16 09:09:32 nanopc kernel:  kthread+0x120/0x220
+Dec 16 09:09:32 nanopc kernel:  ret_from_fork+0x10/0x20
+Dec 16 09:09:32 nanopc kernel: Code: d28fe202 8b020000 f9524400 8b214000 (b9400000)
+Dec 16 09:09:32 nanopc kernel: ---[ end trace 0000000000000000 ]---
